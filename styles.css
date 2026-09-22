@@ -1,0 +1,53 @@
+/* Intentionally awful, neon, clashing, and unreadable styles */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;1,700&display=swap');
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: repeating-linear-gradient(45deg,#ff0 0 10px,#0ff 10px 20px,#f0f 20px 30px,#0f0 30px 40px);
+  color:#000;
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif !important;
+  animation: bgShift 6s infinite linear;
+}
+@keyframes bgShift{0%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(180deg)}100%{filter:hue-rotate(360deg)}}
+.container{max-width:none;padding:6px;margin:0}
+.site-header{padding:8px 0;text-align:left;background:#ff0099;border-bottom:8px dashed #00ff66}
+.title{font-size:72px;margin:0;color:#00ffff;text-shadow:4px 4px 0 #ff00ff, -4px -4px 0 #ffff00;transform:skewX(-12deg) rotate(-6deg)}
+.subtitle{margin:6px 0 0;color:#ffff00;font-size:20px}
+.main{padding:6px}
+.gallery{display:block}
+.card{background:linear-gradient(90deg,#ff00aa 0%,#00ffdd 50%,#ffea00 100%) !important;border:6px solid #000;border-radius:0;padding:30px;margin:12px 6px;box-shadow:12px 12px 0 #ff0000}
+.card:nth-child(even){transform:rotate(3deg)}
+.card:nth-child(odd){transform:rotate(-3deg)}
+.trophy{height:160px;display:flex;align-items:flex-start;justify-content:flex-start;border-radius:0;margin-bottom:12px;position:relative;overflow:visible}
+.card-photo{position:relative;width:100%;height:160px;object-fit:cover;filter:grayscale(0) contrast(200%)}
+.trophy svg{width:120px;height:120px;position:absolute;right:-20px;top:-20px;transform:rotate(22deg)}
+.card-title{margin:0;font-size:28px;color:#000;background:#fff;padding:6px;border:4px double #ff00ff}
+.card-sub{margin:4px 0 0;font-size:18px;color:#000}
+
+/* Blinking, bouncing, spinning horrors */
+.blink{animation:blinkAnim 0.6s steps(2, start) infinite}
+@keyframes blinkAnim{50%{visibility:hidden}}
+.spin{animation:spin 2s linear infinite}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.shake{animation:shake 0.5s infinite}
+@keyframes shake{0%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}100%{transform:translateX(0)}}
+
+/* Modal forced to full-screen and loud */
+.modal{position:fixed;inset:0;display:none;align-items:flex-start;padding-top:20px}
+.modal[aria-hidden="false"]{display:block}
+.modal-backdrop{position:absolute;inset:0;background:rgba(255,0,128,0.35)}
+.modal-panel{position:relative;background:linear-gradient(90deg,#000,#ffdd00);border-radius:0;box-shadow:none;max-width:100%;width:100%;padding:12px}
+.modal-close{position:absolute;right:6px;top:6px;background:#fff;color:#000;border-radius:50%}
+.modal-art{width:120px;height:120px;border-radius:0}
+.modal-content h2{margin:0 0 8px;color:#00ff00}
+.modal-content p{margin:0;color:#000}
+
+/* Accessibility-disrupting utility */
+.sr-only{position:static;width:auto;height:auto;padding:0;margin:0;overflow:visible;clip:auto;border:0}
+
+/* Reduce readability on small screens */
+@media (max-width:600px){
+  .title{font-size:120px}
+  .card{padding:14px}
+}
