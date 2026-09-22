@@ -1,10 +1,129 @@
-<!DOCTYPE html>
-<html lang="cs">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>my page title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Trophies — Hall of Fame</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <img src = https://private-user-images.githubusercontent.com/199732618/652078567-eb9aaacb-5dda-4375-9ec0-e240e0f5d7cc.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTAwNjg2NDksIm5iZiI6MTc5MDA2ODM0OSwicGF0aCI6Ii8xOTk3MzI2MTgvNjUyMDc4NTY3LWViOWFhYWNiLTVkZGEtNDM3NS05ZWMwLWUyNDBlMGY1ZDdjYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkyMlQwOTEyMjlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lODU2M2NjZWMzMTgwMjAzODhiOTMzZGMxNjI0YTcxOTcwYmYwN2UyZDlkYzc4ZjFkYjUzZDhhN2E5ZDQ3NGVjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.WP2T4kXfznR4iVCHBMiAocQZa64lv_vlJXmwxZz4YS8>
+    <header class="site-header">
+      <div class="container">
+        <marquee behavior="alternate" scrollamount="20" style="background:#000;color:#fff;padding:6px;font-size:22px">WELCOME TO THE WORST SITE EVER — DO NOT READ</marquee>
+        <h1 class="title blink">My Trophies <span style="color:#ffff00;background:#ff00ff;padding:4px;border-radius:4px">✨</span></h1>
+        <p class="subtitle">A chaotic showcase for wins, big and small ✨</p>
+        <div style="background:#fff200;padding:8px;margin-top:8px;border:6px dotted #ff00aa">Important: ALL CAPS IS BEST</div>
+      </div>
+    </header>
+
+    <main class="container main">
+      <section class="gallery" id="gallery">
+        <!-- Trophy cards. Use data attributes for modal content -->
+        <article class="card" data-title="Champion Cup" data-desc="Awarded for top performance." data-color="#FFD6E8">
+          <div class="trophy">
+            <img class="card-photo" src="https://picsum.photos/seed/champion/480/360" alt="Photo background for Champion Cup">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <g fill="none" stroke="#fff" stroke-width="2">
+                <path d="M16 12h32v8a12 12 0 0 1-12 12H28A12 12 0 0 1 16 20z" fill="#ff89b6" stroke="none"/>
+                <path d="M24 44h16v4H24z" fill="#ffd1e6"/>
+                <circle cx="32" cy="20" r="3" fill="#fff"/>
+              </g>
+            </svg>
+          </div>
+          <h3 class="card-title">Champion Cup</h3>
+          <p class="card-sub">Top performance</p>
+        </article>
+
+        <article class="card" data-title="Speedster" data-desc="Fastest completion time." data-color="#FFC1E3">
+          <div class="trophy">
+            <img class="card-photo" src="https://picsum.photos/seed/speedster/480/360" alt="Photo background for Speedster">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <g fill="none" stroke="#fff" stroke-width="2">
+                <path d="M18 14h28v6a10 10 0 0 1-10 10H28A10 10 0 0 1 18 20z" fill="#ff7fbf" stroke="none"/>
+                <path d="M26 42h12v4H26z" fill="#ffd6ec"/>
+              </g>
+            </svg>
+          </div>
+          <h3 class="card-title">Speedster</h3>
+          <p class="card-sub">Fastest completion</p>
+        </article>
+
+        <article class="card" data-title="Team Player" data-desc="Recognized for collaboration." data-color="#FFB3DB">
+          <div class="trophy">
+            <img class="card-photo" src="https://picsum.photos/seed/teamplayer/480/360" alt="Photo background for Team Player">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <g fill="none" stroke="#fff" stroke-width="2">
+                <path d="M20 16h24v8a8 8 0 0 1-8 8H28a8 8 0 0 1-8-8z" fill="#ff6fba" stroke="none"/>
+                <path d="M28 44h8v4h-8z" fill="#ffdff2"/>
+              </g>
+            </svg>
+          </div>
+          <h3 class="card-title">Team Player</h3>
+          <p class="card-sub">Collaboration</p>
+        </article>
+
+        <article class="card" data-title="Rising Star" data-desc="Rapid improvement and growth." data-color="#FF9CCF">
+          <div class="trophy">
+            <img class="card-photo" src="https://picsum.photos/seed/risingstar/480/360" alt="Photo background for Rising Star">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <g fill="none" stroke="#fff" stroke-width="2">
+                <path d="M22 12h20v10a9 9 0 0 1-9 9H31a9 9 0 0 1-9-9z" fill="#ff85c0" stroke="none"/>
+                <path d="M30 44h4v4h-4z" fill="#ffe1f0"/>
+              </g>
+            </svg>
+          </div>
+          <h3 class="card-title">Rising Star</h3>
+          <p class="card-sub">Improvement</p>
+        </article>
+
+        <article class="card" data-title="MVP" data-desc="Most valuable player." data-color="#FF74B0">
+          <div class="trophy">
+            <img class="card-photo" src="https://picsum.photos/seed/mvp/480/360" alt="Photo background for MVP">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <g fill="none" stroke="#fff" stroke-width="2">
+                <path d="M16 18h32v6a11 11 0 0 1-11 11H27A11 11 0 0 1 16 24z" fill="#ff6aa3" stroke="none"/>
+                <path d="M24 44h16v4H24z" fill="#ffd4ec"/>
+              </g>
+            </svg>
+          </div>
+          <h3 class="card-title">MVP</h3>
+          <p class="card-sub">Most valuable</p>
+        </article>
+
+        <article class="card" data-title="Participation" data-desc="Thanks for taking part!" data-color="#FFC8E9">
+          <div class="trophy">
+            <img class="card-photo" src="https://picsum.photos/seed/participation/480/360" alt="Photo background for Participation">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <g fill="none" stroke="#fff" stroke-width="2">
+                <path d="M18 18h28v6a9 9 0 0 1-9 9H27a9 9 0 0 1-9-9z" fill="#ff9fcf" stroke="none"/>
+                <path d="M26 44h12v3H26z" fill="#ffe6f3"/>
+              </g>
+            </svg>
+          </div>
+          <h3 class="card-title">Participation</h3>
+          <p class="card-sub">Thanks for joining</p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Modal for trophy details -->
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-backdrop" id="modal-backdrop"></div>
+      <div class="modal-panel" role="dialog" aria-modal="true">
+        <button class="modal-close" id="modal-close">✕</button>
+        <div class="modal-content">
+          <div id="modal-art" class="modal-art"></div>
+          <h2 id="modal-title">Title</h2>
+          <p id="modal-desc">Description</p>
+        </div>
+      </div>
+    </div>
+
+    <hr style="border:8px solid #ff00ff;margin:12px 0">
+    <div style="padding:12px;text-align:center;">
+      <marquee scrollamount="12" style="color:#00ffff;background:#ff0077;padding:8px">SALE: EVERYTHING IS LOUDER</marquee>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
